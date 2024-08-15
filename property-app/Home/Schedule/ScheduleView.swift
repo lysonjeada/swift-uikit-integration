@@ -18,6 +18,7 @@ struct ScheduleView: View {
         NavigationView {
             List(properties) { property in
                 PropertyRowView(property: property)
+                    .listRowBackground(Color.clear)
             }
             .navigationTitle("Scheduled Properties")
         }
@@ -57,8 +58,10 @@ struct PropertyRowView: View {
             Text(property.address)
                 .font(.footnote)
                 .foregroundColor(.gray)
+                .lineLimit(nil)
         }
         .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.white)
         .cornerRadius(8)
         .shadow(radius: 2)
