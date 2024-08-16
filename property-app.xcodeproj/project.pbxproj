@@ -140,11 +140,11 @@
 		241918302C6D7F14004147DF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				241918362C6D8233004147DF /* Property.swift */,
 				2419183B2C6EE218004147DF /* PropertyViewModel.swift */,
 				241918022C6C331F004147DF /* PropertyViewController.swift */,
 				2419182E2C6C3542004147DF /* PropertyCoordinator.swift */,
 				241918312C6D7F21004147DF /* Schedule */,
-				241918362C6D8233004147DF /* Property.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
