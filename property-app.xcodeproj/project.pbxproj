@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		241917FF2C6C331F004147DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241917FE2C6C331F004147DF /* AppDelegate.swift */; };
 		241918012C6C331F004147DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918002C6C331F004147DF /* SceneDelegate.swift */; };
-		241918032C6C331F004147DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918022C6C331F004147DF /* ViewController.swift */; };
+		241918032C6C331F004147DF /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918022C6C331F004147DF /* PropertyViewController.swift */; };
 		241918082C6C3322004147DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241918072C6C3322004147DF /* Assets.xcassets */; };
 		2419180B2C6C3322004147DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241918092C6C3322004147DF /* LaunchScreen.storyboard */; };
 		241918162C6C3322004147DF /* property_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918152C6C3322004147DF /* property_appTests.swift */; };
@@ -19,6 +19,8 @@
 		241918332C6D7FCB004147DF /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918322C6D7FCB004147DF /* ScheduleViewController.swift */; };
 		241918352C6D7FDA004147DF /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918342C6D7FDA004147DF /* ScheduleView.swift */; };
 		241918372C6D8233004147DF /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918362C6D8233004147DF /* Property.swift */; };
+		2419183A2C6ECAC5004147DF /* ConvertToHex+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241918392C6ECAC5004147DF /* ConvertToHex+Color.swift */; };
+		2419183C2C6EE218004147DF /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419183B2C6EE218004147DF /* PropertyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,7 @@
 		241917FB2C6C331F004147DF /* property-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "property-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		241917FE2C6C331F004147DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		241918002C6C331F004147DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		241918022C6C331F004147DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		241918022C6C331F004147DF /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
 		241918072C6C3322004147DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2419180A2C6C3322004147DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2419180C2C6C3322004147DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		241918322C6D7FCB004147DF /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		241918342C6D7FDA004147DF /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		241918362C6D8233004147DF /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		241918392C6ECAC5004147DF /* ConvertToHex+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConvertToHex+Color.swift"; sourceTree = "<group>"; };
+		2419183B2C6EE218004147DF /* PropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		241917FD2C6C331F004147DF /* property-app */ = {
 			isa = PBXGroup;
 			children = (
+				241918382C6ECA97004147DF /* Utils */,
 				241918302C6D7F14004147DF /* Home */,
 				241917FE2C6C331F004147DF /* AppDelegate.swift */,
 				241918002C6C331F004147DF /* SceneDelegate.swift */,
@@ -135,7 +140,8 @@
 		241918302C6D7F14004147DF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				241918022C6C331F004147DF /* ViewController.swift */,
+				2419183B2C6EE218004147DF /* PropertyViewModel.swift */,
+				241918022C6C331F004147DF /* PropertyViewController.swift */,
 				2419182E2C6C3542004147DF /* PropertyCoordinator.swift */,
 				241918312C6D7F21004147DF /* Schedule */,
 				241918362C6D8233004147DF /* Property.swift */,
@@ -150,6 +156,14 @@
 				241918342C6D7FDA004147DF /* ScheduleView.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		241918382C6ECA97004147DF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				241918392C6ECAC5004147DF /* ConvertToHex+Color.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,11 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				241918372C6D8233004147DF /* Property.swift in Sources */,
+				2419183C2C6EE218004147DF /* PropertyViewModel.swift in Sources */,
 				241918332C6D7FCB004147DF /* ScheduleViewController.swift in Sources */,
-				241918032C6C331F004147DF /* ViewController.swift in Sources */,
+				241918032C6C331F004147DF /* PropertyViewController.swift in Sources */,
 				2419182F2C6C3542004147DF /* PropertyCoordinator.swift in Sources */,
 				241917FF2C6C331F004147DF /* AppDelegate.swift in Sources */,
 				241918012C6C331F004147DF /* SceneDelegate.swift in Sources */,
+				2419183A2C6ECAC5004147DF /* ConvertToHex+Color.swift in Sources */,
 				241918352C6D7FDA004147DF /* ScheduleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

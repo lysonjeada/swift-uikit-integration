@@ -1,24 +1,21 @@
-//
-//  PropertyCoordinator.swift
-//  property-app
-//
-//  Created by Amaryllis Rosemaria Baldrez Calefi on 13/08/24.
-//
-
-import Foundation
-
 import UIKit
 
-class PropertyCoordinator: Coordinator {
-    var navigationController: UINavigationController
+protocol PropertyCoordinatorProtocol: AnyObject {
+    func navigateToSchedule()
+}
+
+class PropertyCoordinator: PropertyCoordinatorProtocol {
+    private var navigationController: UINavigationController
+    private let viewModel: PropertyViewModel
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.viewModel = PropertyViewModel()
+        viewModel.coordinator = self
     }
 
     func start() {
-        let viewController = ViewController()
-        viewController.coordinator = self
+        let viewController = PropertyViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: false)
     }
 
@@ -26,9 +23,4 @@ class PropertyCoordinator: Coordinator {
         let scheduleViewController = ScheduleViewController()
         navigationController.present(scheduleViewController, animated: true)
     }
-}
-
-protocol Coordinator {
-    var navigationController: UINavigationController { get set }
-    func start()
 }
